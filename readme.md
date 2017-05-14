@@ -2,7 +2,7 @@
 
 This project contains utility to process meta-annotations as used in spring.
 
-It is intended to be used in case of non-spring projects or in spring prior to version 4. (in Spring 4, you have (AnnotationUtil)[http://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/core/annotation/AnnotationUtils.html] with Meta-Annotation support and `@AliasFor` included)
+It is intended to be used in case of non-spring projects or in spring prior to version 4. (in Spring 4, you have [AnnotationUtil|http://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/core/annotation/AnnotationUtils.html] with Meta-Annotation support and `@AliasFor` included)
 
 Meta-annotations are annotations that override values from other annotations.
 
