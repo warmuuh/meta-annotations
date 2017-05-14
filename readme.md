@@ -6,7 +6,25 @@ It is intended to be used in case of non-spring projects or in spring prior to v
 
 Meta-annotations are annotations that override values from other annotations.
 
-##usage
+## installation
+
+Step 1. Add the JitPack repository to your build file
+
+	<repositories>
+		<repository>
+		    <id>jitpack.io</id>
+		    <url>https://jitpack.io</url>
+		</repository>
+	</repositories>Copy
+Step 2. Add the dependency
+
+	<dependency>
+	    <groupId>com.github.warmuuh</groupId>
+	    <artifactId>meta-annotations</artifactId>
+	    <version>0.0.1</version>
+	</dependency>
+	
+## usage
 
 Given a normal annotation
 ```//retention etc
@@ -31,7 +49,7 @@ SimpleAnnotation a = new AnnotationReader(obj.getClass()).getAnnotation(SimpleAn
 assertThat(a.simpleString()).isEqualTo("anotherValue");	
 ```
 
-###aliasing
+### aliasing
 attributes can also be inherited and renamed so that an override can happen partially.
 
 ```
