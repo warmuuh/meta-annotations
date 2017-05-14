@@ -28,24 +28,31 @@ Step 2. Add the dependency
 ## usage
 
 Given a normal annotation
-```//retention etc
+
+```
+//retention etc
 public @interface SimpleAnnotation {
 	String simpleString();
-}```
+}
+```
 
 a meta-annotation looks like this:
 
-```//retention etc
+```
+//retention etc
 @SimpleAnnotation(simpleString = "anotherValue")
 public @interface MetaAnnotation {
-}```
+}
+```
 
 and this is how to read those annotations:
 
-```@MetaAnnotation()
+```
+@MetaAnnotation()
 public class AnnotatedClass{}
 
 // in the code later on:
+AnnotatedClass obj = new AnnotatedClass();
 SimpleAnnotation a = new AnnotationReader(obj.getClass()).getAnnotation(SimpleAnnotation.class);
 assertThat(a.simpleString()).isEqualTo("anotherValue");	
 ```
