@@ -29,7 +29,7 @@ Step 2. Add the dependency
 
 Given a normal annotation
 
-```
+```java
 //retention etc
 public @interface SimpleAnnotation {
 	String simpleString();
@@ -38,7 +38,7 @@ public @interface SimpleAnnotation {
 
 a meta-annotation looks like this:
 
-```
+```java
 //retention etc
 @SimpleAnnotation(simpleString = "anotherValue")
 public @interface MetaAnnotation {
@@ -47,7 +47,7 @@ public @interface MetaAnnotation {
 
 and this is how to read those annotations:
 
-```
+```java
 @MetaAnnotation()
 public class AnnotatedClass{}
 
@@ -60,7 +60,7 @@ assertThat(a.simpleString()).isEqualTo("anotherValue");
 ### aliasing
 attributes can also be inherited and renamed so that an override can happen partially.
 
-```
+```java
 public @interface SimpleTestAnnotation {
 	String stringA();
 	String stringB();
